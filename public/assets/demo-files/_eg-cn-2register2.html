@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bmob.js"></script>
+    <script type="text/javascript" src="scripts/user.js"></script>
+
+    <title>Assembo</title>
+    
+    <style>
+        li, .foo {
+            list-style: none;
+        }
+        
+        ul {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+        #footer-bar {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 98;
+            -webkit-backdrop-filter: saturate(180%) blur(0px);
+            backdrop-filter: saturate(180%) blur(0px);
+            background-color: rgba(255, 255, 255, 0);
+            display: flex;
+            min-height: 61px;
+            border-top: solid 1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 200ms ease !important;
+            }
+    </style>
+    
+</head>
+    
+<body class="theme-light">
+    
+<div id="page">
+    
+    <div class="header header-fixed header-logo-center header-auto-show">
+        <a href="_index-cn.html" class="header-title">Assembo</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+    </div>
+
+    <div id="footer-bar" class="footer-bar-6">
+        <a data-menu="input-sheet" class="active-nav"></a>
+        <a data-menu="input-sheet" class="circle-nav"><i class="fa fa-plus"></i></a>
+        <a data-menu="input-sheet" class="active-nav"></a>
+    </div>
+    
+    <div class="page-title page-title-fixed">
+        <h1>动态信息</h1>
+        <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-share-alt"></i></a>
+    </div>
+    <div class="page-title-clear"></div>
+
+    <div id="menu-share" class="menu menu-box-bottom rounded-m"  data-menu-load="menu-share.html" data-menu-height="370"> </div> 
+
+    <!-- Page content starts here--> 
+    <div class="page-content">
+        <div class="wrapper">
+            <ul class="list3">
+                <li>
+                    <a href="_task-content.html">
+                    <div class="card card-style">
+                        <div class="content">
+                            <p class="font-600 mb-n1 color-green-dark">更新信息卡片
+                            </p>
+                            <h1>AutoCAD V1 图纸更新</h1>
+                            <h6>
+                                <span class="color-green-dark"><i class="fas fa-chevron-left"></i>左滑标记“已读”</span>
+                                <br>
+                                <span class="color-yellow-dark"><i class="fas fa-chevron-right"></i>右滑标记“待跟进”</span>
+                            </h6>
+
+                            <div class="d-flex">
+                                <div class="w-65 border-right pe-3 border-highlight">
+                                    <p>
+                                        如图，更新了这个部分和那个部分
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="mt-2"><em>小红 创建于 1:30pm GMT+8 3/1/2021</em></p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                    <ul class="todo_list"></ul>
+            </ul>
+        </div>
+        <script>
+            var a3 = Swiped.init({
+                query: '.list3 li',
+                left: 400,
+                right: 400,
+                onOpen: function() {
+                    this.destroy(true)
+        
+                },
+                onClose: function() {
+                    console.log('close')
+                }
+            });
+        </script>
+
+
+        <div class="card card-style">
+            <div class="content">
+                <p class="font-600 mb-n1 color-green-dark">
+                </p>
+                <h1><i class="fa fa-glass-cheers color-black"></i> 您已成功创建第一个卡片！<br>下面注册开始极速信息同步吧</h1>
+                <div class="content px-4">
+                    <div class="input-style input-transparent no-borders has-icon validate-field mb-4">
+                        <i class="fa fa-at color-black"></i>
+                        <input id="email" type="email" class="form-control validate-email color-black" placeholder="电子邮箱">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>
+                    <div class="input-style input-transparent no-borders has-icon validate-field mb-4">
+                        <i class="fa fa-lock color-black"></i>
+                        <input id="password" type="password" class="form-control validate-password color-black" placeholder="密码">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>  
+                    
+                        <button onclick="registerNew()" class="btn btn-center-m mb-3 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">注 册</button>
+
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+            <!--Menu Success-->
+    <div id="invite-friend" 
+    class="menu menu-box-modal rounded-m" 
+    data-menu-height="475" 
+    data-menu-width="350">
+   <div class="menu-title">
+       <h1><i class="fa fa-bullhorn color-black"></i> 邀请共享信息的队友</h1>
+   </div>
+   <div class="content px-3">
+    <h6>输入他们的电子邮箱:</h6>
+    <div class="input-style input-transparent no-borders has-icon validate-field mb-2">
+        <i class="fa fa-at color-black"></i>
+        <input id="email" type="email" class="form-control validate-email color-black" id="form1ac" placeholder="电子邮箱1">
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+    </div>
+    <div class="input-style input-transparent no-borders has-icon validate-field mb-2">
+        <i class="fa fa-at color-black"></i>
+        <input id="email" type="email" class="form-control validate-email color-black" id="form1ac" placeholder="电子邮箱2">
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+    </div>   
+    <div class="input-style input-transparent no-borders has-icon validate-field mb-2">
+        <i class="fa fa-at color-black"></i>
+        <input id="email" type="email" class="form-control validate-email color-black" id="form1ac" placeholder="电子邮箱3">
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+    </div>
+
+    <a data-menu="invite-friend">
+        <button onclick="invite()" class="btn btn-center-m mb-4 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">邀 请</button>
+    </a>
+
+    <h6>或者给他们这个邀请链接:</h6>
+    <p>https://www.assembo.cc/taskname</p>
+
+    <a href="#" class="close-menu btn-full text-center text-uppercase font-900 color-dark-dark opacity-90 font-110">稍后再试</a>
+
+
+</div>
+
+        
+    <!--         <div>
+            <p class="text-center">卡片处理完啦，嘿嘿</p>
+        </div>
+        Page content ends here-->
+    
+    
+</div>
+
+<script src="./_task.js"></script>
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/swiped.js"></script>
+
+
+
+</body>
+</html>

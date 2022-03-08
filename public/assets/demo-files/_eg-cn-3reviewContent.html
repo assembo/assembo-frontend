@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Assembo</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+    
+<body class="theme-light">
+
+<div id="page">
+    
+    <div class="header header-fixed header-logo-center ">
+        <a href="index.html" class="header-title">卡片内容</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" data-menu="menu-share" class="header-icon header-icon-4"><i class="fas fa-share-alt"></i></a>
+    </div>
+
+    <div class="page-title-clear"></div>
+        
+    <div class="page-content">
+                   
+        <div class="card card-style">
+            <div class="content">
+
+                <button class="btn mb-2 rounded-m bg-dark-dark">张三测试实验室权限申请</button>                    
+                <button class="btn mb-2 rounded-m bg-dark-dark">项目标签：研发</button>                    
+
+                <h3 class="mt-2">审批：张三测试实验室权限申请</h3>
+                <p class="font-14 mb-n1 color-dark-dark">实习生的实验室权限申请，补充材料在附件，可见成员为审批人
+                </p>
+                <div class="mt-2 d-flex">
+                    <div class="w-65 border-right pe-2">
+                        <a href="#"><img src="images/empty.png" data-src="images/avatars/2s.png" width="20" class="rounded-circle preload-img"></a>
+                    </div>
+                    <div class="w-35">
+                        <em>张三 更新于 1:30pm GMT+8 3/1/2021</em>
+                    </div>
+                </div>
+
+                <div class="divider mt-3 mb-3"></div>
+
+                <div class="mt-2 mb-3 d-flex">
+                    <div class="w-70 border-right pe-2">
+                        <p class="font-600 font-15 color-black mb-2">起始截止时间</p>
+                    </div>
+                    <div class="w-30">
+                        <p class="font-14 mb-n1 color-dark-dark">
+                            从 2/25/2021 到 3/1/2021
+                        </p>                    
+                    </div>
+                </div>
+
+                <div class="divider mt-0 mb-3"></div>
+
+
+                <div class="mt-2 mb-3 d-flex">
+                    <div class="align-self-center w-65 border-right pe-3 border-highlight">    
+                        <p class="font-600 font-15 color-black mb-2">图片及文档</p>
+                    </div>
+                    <div class="w-35 ps-3 pt-2">
+                        <img src="images/task/dwg icon.png" width="30" height="30" class="rounded-s">
+                    </div>
+                </div>
+
+                <div class="divider mt-0 mb-2"></div>
+
+                <div class="mt-2 mb-3 d-flex">
+                    <div class="align-self-center w-65 border-right pe-3 border-highlight">    
+                        <p class="font-600 font-15 color-black mb-2">可见成员</p>
+                    </div>
+                    <div class="w-65 border-right pe-3 border-highlight">
+                        <p class="font-14">
+                            李四
+                            <a href="#"><img src="images/empty.png" data-src="images/avatars/1s.png" width="20" class="rounded-circle preload-img"></a>
+                            王五
+                            <a href="#"><img src="images/empty.png" data-src="images/avatars/3s.png" width="20" class="rounded-circle preload-img"></a>
+                        </p>                
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h3>
+                    <button class="btn rounded-m bg-dark-dark"><i class="fas fa-plus"></i></button>
+                    添加更新
+                </h3>
+                </div> 
+                <div class="mt-3">
+                    <h3>
+                    <button class="btn rounded-m bg-red-dark"><i class="fas fa-times"></i></button>
+                     终止该任务
+                    </h3>
+                </div> 
+
+            </div>
+        </div>
+
+    
+    </div>
+
+</div>
+    <!-- Page content ends here-->
+    
+    <!-- Share Menu-->
+    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370"></div>  
+  
+    
+</div>
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+</body>
+</html>

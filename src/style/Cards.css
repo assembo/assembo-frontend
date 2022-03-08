@@ -1,0 +1,59 @@
+/* limit number of lines to show */
+.showFirstLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%) !important;
+}
+
+.container {
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  margin: "auto";
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontal-center {
+  margin: "auto";
+}
+
+.block {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 61px;
+  top: 0px;
+  overflow: auto;
+}
+
+#headImage {
+  display: "block";
+  float: right;
+  border-radius: 20px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-right: 15px;
+}
+
+#headImage img {
+  max-width: 33px;
+  max-height: 33px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 15px;
+}

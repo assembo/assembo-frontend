@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bmob.js"></script>
+    <script type="text/javascript" src="scripts/user.js"></script>
+    <title>Assembo</title>
+    
+    <style>
+        li, .foo {
+            list-style: none;
+        }
+        
+        ul {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+    
+<body class="theme-light">
+    
+<div id="page">
+
+    <!--page content starts here-->
+    <div class="page-content pb-0">
+        
+        <div data-card-height="cover-full" class="card mb-0" style="background-color:rgba(255, 255, 255, 0.4)">
+            <div class="card-center">
+                <div class="text-center">
+                    <p class="font-600 color-highlight mb-2 font-16"><i class="fa fa-rocket"></i> 极速信息同步</p>
+                    <h1 class="font-36 color-dark-dark">Assembo</h1>
+                    <p class="boxed-text-xl color-white opacity-50 pt-3 font-15">
+                    </p>
+
+                </div>
+                
+                <div class="content px-4">
+                    <div class="input-style input-transparent no-borders has-icon validate-field mb-4">
+                        <i class="fa fa-at color-black"></i>
+                        <input id="email" type="email" class="form-control validate-email color-black" placeholder="电子邮箱">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>
+                    <div class="input-style input-transparent no-borders has-icon validate-field mb-4">
+                        <i class="fa fa-lock color-black"></i>
+                        <input id="password" type="password" class="form-control validate-password color-black" placeholder="密码">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>  
+                    
+                        <button onclick="registerNew()" class="btn btn-center-m mb-3 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">登 录</button>
+
+                    <div class="row pt-1 mb-3">
+                        <div class="col-6 text-start font-11">
+                            <a class="color-white opacity-50" href="page-forgot-2.html"></a>
+                        </div>
+                        <div class="col-6 text-end font-12">
+                            <a class="color-highlight opacity-100" href="page-forgot-2.htm">忘记密码？</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                
+            </div>
+        </div>
+        
+             
+    </div>
+    <!-- Page content ends here-->
+     
+    <!--         <div>
+            <p class="text-center">卡片处理完啦，嘿嘿</p>
+        </div>
+        Page content ends here-->
+    
+    
+</div>
+
+<script src="./_task.js"></script>
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/swiped.js"></script>
+
+
+
+</body>
+</html>

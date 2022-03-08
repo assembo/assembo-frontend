@@ -1,0 +1,39 @@
+.assembo-text__title {
+    font-family: PingFangSC-Ultralight, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.assembo-text__large {
+    font-family: PingFangSC-Ultralight, sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.assembo-text__medium {
+    font-family: PingFangSC-Ultralight, sans-serif;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.assembo-text__small {
+    font-family: PingFangSC-Ultralight, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}

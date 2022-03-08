@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>AppKit Mobile</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+
+<script type="text/javascript" src="_task.js"></script>
+
+    
+<body class="theme-light">
+
+<div class="header header-fixed header-logo-center ">
+    <a href="index.html" class="header-title">New Update</a>
+    <a href="#" data-back-button class="header-icon header-icon-1">
+</div>
+
+<form class="content mb-0">        
+    <h3>New Update</h3>
+    <p>Add updates to a task</p>
+    
+    <div class="input-style no-borders no-icon validate-field mb-4">
+        <input type="text" class="title_input" id="title_input" placeholder="Title (Eg. AutoCAD file V1 update)">
+        <label for="form1a" class="color-highlight">Title</label>
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+        <em>(required)</em>
+    </div>
+    
+    <div class="input-style no-borders no-icon validate-field mb-4">
+        <input type="text" class="description_input" id="description_input" placeholder="Description (Eg. Edited this part and that part)">
+        <label for="form2a" class="color-highlight">Description</label>
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+        <em>(required)</em>
+    </div>
+
+    <div class="input-style no-borders no-icon mb-4">
+        <label for="form3a" class="color-highlight">Select a Task</label>
+        <select id="form3a">
+            <option value="default" disabled selected>Select a Task</option>
+            <option value="iOS">iOS</option>
+            <option value="Linux">Linux</option>
+            <option value="MacOS">MacOS</option>
+            <option value="Android">Android</option>
+            <option value="Windows">Windows</option>
+        </select>
+        <span><i class="fa fa-chevron-down"></i></span>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+        <i class="fa fa-check disabled invalid color-red-dark"></i>
+        <em></em>
+    </div>
+
+    <div class="input-style no-borders no-icon mb-4">
+        <label for="form4a" class="color-highlight">Select Members to share with</label>
+        <select id="form4a">
+            <option value="default" disabled selected>Select Members to share with</option>
+            <option value="iOS">iOS</option>
+            <option value="Linux">Linux</option>
+            <option value="MacOS">MacOS</option>
+            <option value="Android">Android</option>
+            <option value="Windows">Windows</option>
+        </select>
+        <span><i class="fa fa-chevron-down"></i></span>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+        <i class="fa fa-check disabled invalid color-red-dark"></i>
+        <em></em>
+    </div>
+
+    <div class="input-style no-borders no-icon validate-field mb-4">
+        <input type="text" class="form-control validate-text" id="form5a" placeholder="Document/Link to document">
+        <label for="form5a" class="color-highlight">Document</label>
+        <i class="fa fa-times disabled invalid color-red-dark"></i>
+        <i class="fa fa-check disabled valid color-green-dark"></i>
+        <em>(required)</em>
+    </div>
+
+    
+    
+    <button class="todo_button btn btn-center-xl btn-full mb-3 rounded-xl text-uppercase font-900 shadow-s bg-dark-dark" type="submit">Submit</button>
+
+</form>
+</body>
+</html>

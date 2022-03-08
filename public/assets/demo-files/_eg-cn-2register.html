@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bmob.js"></script>
+    <script type="text/javascript" src="scripts/db.js"></script>
+    <title>Assembo</title>
+    
+    <style>
+        li, .foo {
+            list-style: none;
+        }
+        
+        ul {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+        #footer-bar {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 98;
+            -webkit-backdrop-filter: saturate(180%) blur(0px);
+            backdrop-filter: saturate(180%) blur(0px);
+            background-color: rgba(255, 255, 255, 0);
+            display: flex;
+            min-height: 61px;
+            border-top: solid 1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 200ms ease !important;
+            }
+    </style>
+    
+</head>
+    
+<body class="theme-light">
+    
+<div id="page">
+    <div id="footer-bar" class="footer-bar-1">
+        <a href="_cn-3taskForm.html"><button class="btn rounded-circle bg-dark-dark"><i class="fas fa-plus"></i></button></a>
+    </div>
+
+    <!--page content starts here-->
+    <!--Register steps:-->
+    <!--_2register_cn-->
+    <!--1. Press plus button to start-->
+    <!--2. Input sheet: fill in title and description/import from text(pre-filled)-->
+    <!--_2register2_cn-->
+    <!--3. Enter email and password to register-->
+    <!--4. Rename new task(generate deep link url)-->
+    <!--5. Invite teammates by entering email or sharing invitation link-->
+    <div class="page-content pb-0">
+        
+        <div data-card-height="cover-full" class="card mb-0" style="background-color:rgba(255, 255, 255, 0.4)">
+            <div class="card-center">
+
+                <div class="text-center mt-5">
+                    <p class="font-600 color-highlight mb-2 font-16"><i class="fa fa-rocket"></i> 极速信息同步</p>
+                    <h1 class="font-36 color-dark-dark">Assembo</h1>
+                    <p class="boxed-text-xl color-white opacity-50 pt-3 font-15">           
+                    </p>
+                </div>
+
+                <div class="text-center mt-5 mb-3">
+                    <p class="color-highlight mt-4 mb-2 font-12">第一次使用？</p>
+                    <button class="btn btn-center-xl mb-3 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">点击下方加号开始试用！</button>
+                </div>
+
+                <a href="_cn-2login.html" class="text-center mt-0 mb-5">
+                    <p class="color-highlight mt-4 mb-2 font-12">或者</p>
+                    <button class="btn btn-center-m mb-3 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">
+                        登 录
+                    </button>
+                </a>
+                
+
+
+                
+
+                
+            </div>
+        </div>
+        
+             
+    </div>
+    
+        <!-- Install Prompt for Android -->
+        <div id="menu-install-pwa-android" class="menu menu-box-bottom rounded-m">
+            <img class="mx-auto mt-4 rounded-m" src="app/icons/icon-128x128.png" alt="img" width="90">
+            <h4 class="text-center mt-4 mb-2">添加Assembo到主页</h4>
+            <p class="text-center boxed-text-xl">
+                下载Assembo到主页：<br>
+                1. 用Chrome打开该链接<br>
+                2. 然后打开Chrome菜单并选择“添加到主页”
+            </p>
+            <div class="boxed-text-l">
+                <a href="#" class="pwa-install mx-auto btn btn-m font-600 bg-dark-dark">添加Assembo到主页</a>
+                <a href="#" class="pwa-dismiss close-menu btn-full mt-3 pt-2 text-center text-uppercase font-600 color-red-light font-12 pb-4 mb-3">稍后再试</a>
+            </div>
+        </div>   
+    
+        <!-- Install instructions for iOS -->
+        <div id="menu-install-pwa-ios" class="menu menu-box-bottom rounded-m">
+            <div class="boxed-text-xl top-25">
+                <img class="mx-auto mt-4 rounded-m" src="app/icons/icon-128x128.png" alt="img" width="90">
+                <h4 class="text-center mt-4 mb-2">添加Assembo到主页</h4>
+                <p class="text-center ms-3 me-3">
+                    下载Assembo到主页：<br>
+                    1. 用Safari打开该链接 <br>
+                    2. 然后打开Safari菜单并选择“添加到主页”
+                </p>
+                <a href="#" class="pwa-dismiss close-menu btn-full mt-3 text-center text-uppercase font-900 color-red-light opacity-90 font-110 pb-5">稍后再试</a>
+            </div>
+        </div>  
+
+        
+    <!--Page content ends here-->
+    
+    
+</div>
+
+<script src="./_task.js"></script>
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="dist/swiped.js"></script>
+
+
+
+</body>
+</html>

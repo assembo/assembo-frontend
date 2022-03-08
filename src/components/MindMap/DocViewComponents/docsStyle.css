@@ -1,0 +1,10 @@
+.parent-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.progress-div {
+  transition: all 0.5s ease;
+}

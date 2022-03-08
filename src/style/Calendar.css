@@ -1,0 +1,31 @@
+.assembo__calendar-container {
+  flex-grow: 1;
+  margin: 0 15px 0 15px;
+}
+.assembo__calendar {
+  width: 270px;
+}
+
+.react-daterange-picker__wrapper {
+  border: none;
+}
+
+.react-daterange-picker__inputGroup {
+  color: white;
+}
+
+.react-daterange-picker__inputGroup__input {
+  color: white;
+}
+
+.react-daterange-picker__range-divider {
+  color: white;
+}
+
+.react-daterange-picker__calendar-button__icon {
+  stroke: white !important;
+}
+
+.react-daterange-picker__clear-button__icon {
+  stroke: white !important;
+}

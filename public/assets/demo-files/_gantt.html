@@ -1,0 +1,121 @@
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/timelinestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+
+    <script type="text/javascript" src="scripts/timeline.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div class="page-content">    
+    <div class="card-style">
+  <script type="text/javascript">
+  
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['', '', '',
+        new Date(2021, 2, 21), new Date(2021, 3, 30), null, 90, null],
+        ['2015Winter', '', 'winter',
+        new Date(2021, 3, 15), new Date(2021, 5, 10), null, 15, null],
+        ['Football', '', 'sports',
+        new Date(2021, 4, 1), new Date(2021, 6, 30), null, 0, null],
+        ['Baseball', '', 'sports',
+        new Date(2021, 6, 15), new Date(2021, 9, 30), null, 0, null],
+        ['Basketball', '', 'sports',
+        new Date(2021, 6, 1), new Date(2022, 1, 5), null, 0, null],
+      ]);
+
+      var options = {
+        height: 300,
+        gantt: {
+          trackHeight: 30
+        }
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+    </div>
+    </div>
+</head>
+<body>
+    <div class="page-content">    
+        <div class="card-style">
+      <script type="text/javascript">
+      
+        google.charts.load('current', {'packages':['gantt']});
+        google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+    
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Task ID');
+          data.addColumn('string', 'Task Name');
+          data.addColumn('string', 'Resource');
+          data.addColumn('date', 'Start Date');
+          data.addColumn('date', 'End Date');
+          data.addColumn('number', 'Duration');
+          data.addColumn('number', 'Percent Complete');
+          data.addColumn('string', 'Dependencies');
+    
+          data.addRows([
+            ['', '', '',
+            new Date(2021, 2, 21), new Date(2021, 3, 30), null, 90, null],
+            ['2015Winter', '', 'winter',
+            new Date(2021, 3, 15), new Date(2021, 5, 10), null, 15, null],
+            ['Football', '', 'sports',
+            new Date(2021, 4, 1), new Date(2021, 6, 30), null, 0, null],
+            ['Baseball', '', 'sports',
+            new Date(2021, 6, 15), new Date(2021, 9, 30), null, 0, null],
+            ['Basketball', '', 'sports',
+            new Date(2021, 6, 1), new Date(2022, 1, 5), null, 0, null],
+          ]);
+    
+          var options = {
+            height: 300,
+            gantt: {
+              trackHeight: 30
+            }
+          };
+    
+          var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+    
+          chart.draw(data, options);
+        }
+      </script>
+        </div>
+        </div>
+  <div id="chart_div">
+      
+  </div>
+</body>
+</html>

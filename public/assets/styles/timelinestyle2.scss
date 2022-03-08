@@ -1,0 +1,151 @@
+@import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans+Condensed:300';
+$swimlane-height: 40px;
+$grid: 72px;
+$bars: 1,2,3,4;
+$bar-lengths: 3,2,4,2;
+$left-offsets:0,3,4,7;
+$bar-color:rgba(10,39,65,0.7);
+$toolbox-color:rgba(137,188,203, 1);
+$header-color1: rgb(184, 148, 214);
+$header-color2: rgb(171, 153, 216);
+$header-color3: rgb(156, 160, 218);
+$header-color4: rgb(140, 165, 219);
+$header-colors: $header-color1,$header-color2,$header-color3,$header-color4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+@mixin renderHeader($color) {
+  display: inline-block;
+  width: 10%;
+  height: $swimlane-height;
+  vertical-align: top;
+  line-height: $swimlane-height;
+  text-align: right;
+  padding-right: 5px;
+  background-color: $color;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+}
+@mixin renderSwimlane($color) {
+  display: inline-block;
+  width: 90%;
+  height: $swimlane-height;
+  position: relative;
+  background-color: $color;
+  padding:0 5px;
+}
+
+@mixin renderBar($left-offset, $width) {
+  position: absolute;
+  left: 0;
+  width: $width;
+  height: 30px;
+  border-radius: 5px;
+  background-color: $bar-color;
+  margin: 5px 0;
+  left: $left-offset;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+}
+
+@each $i in $bars {
+  .bar#{$i} {
+    @include renderBar(nth($left-offsets, $i)*$grid, nth($bar-lengths, $i)*$grid);
+  }
+}
+
+@for $i from 1 through 4 {
+  .bar#{$i} {
+    @include renderBar(nth($left-offsets, $i)*$grid, nth($bar-lengths, $i)*$grid);
+  }
+  .header#{$i} {
+    @include renderHeader(nth($header-colors, $i));
+  }
+  .swimlane#{$i} {
+    @include renderSwimlane(rgba(nth($header-colors, $i), 0.6));
+  }
+}
+.banner {
+  background-color: #333333;
+  height: 150px;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  padding: 50px;
+  h1{
+    margin-bottom: 10px;
+  }
+}
+main {
+  width: 800px;
+  margin: 30px auto;
+}
+
+.row {
+  height: 40px;
+}
+
+.toolbox {
+  position: absolute;
+  z-index: 99;
+  background-color: red;
+  left: 10%;
+  top: 35px;
+  padding: 5px;
+  font-size: 0.7em;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background-color: $toolbox-color;
+  border-radius: 5px;
+  display:none;
+}
+
+
+// override jquery ui theme
+.ui-resizable {
+  position: relative;
+}
+
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  z-index: 99999;
+  display: block;
+}
+
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0px;
+  height: 100%;
+}
+
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0px;
+  height: 100%;
+}
+
+.ui-resizable-n,
+.ui-resizable-s,
+.ui-resizable-se,
+.ui-resizable-sw,
+.ui-resizable-nw,
+.ui-resizable-ne,
+.ui-icon-gripsmall-diagonal-se {
+  display: none;
+}

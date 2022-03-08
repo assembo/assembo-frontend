@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <link rel="stylesheet" type="text/css" href="code/styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="code/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="code/fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="code/app/icons/icon-144x144.png">
+
+    <script type="text/javascript" src="code/scripts/swiped.js"></script>
+
+    <script type="text/javascript" src="code/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="code/scripts/bmob.js"></script>
+    <script type="text/javascript" src="code/scripts/user.js"></script> 
+    <script type="text/javascript" src="code/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="code/scripts/custom.js"></script>
+    <title>Assembo</title>
+    
+    <style>
+        li, .foo {
+            list-style: none;
+        }
+        
+        ul {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+    </style>
+    
+</head>
+    
+<body class="theme-light">
+    
+<div id="page">
+
+    <!--page content starts here-->
+    <div class="page-content pb-0">
+        
+        <div data-card-height="cover-full" class="card mb-0" style="background-color:rgba(255, 255, 255, 0.4)">
+            <div class="card-center">
+                <div class="text-center">
+                    <h1 class="font-36 color-dark-dark">Assembo</h1>
+                    <p class="color-dark-dark opacity-60 mt-3 mb-3 font-16"><i class="fa fa-rocket"></i> 超快速信息同步 全任务版本控制</p>
+
+                    <p class="boxed-text-xl color-white opacity-50 pt-3 font-15">
+                    </p>
+
+                </div>
+                
+                <div class="content px-4">
+                    <div class="input-style input-transparent has-borders has-icon validate-field mb-4">
+                        <i class="fa fa-at color-black"></i>
+                        <input id="email" type="email" class="font-16 form-control validate-email color-black" placeholder="电子邮箱">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>
+                    <div class="input-style input-transparent has-borders has-icon validate-field mb-4">
+                        <i class="fa fa-lock color-black"></i>
+                        <input id="password" type="password" class="font-16 form-control validate-password color-black" placeholder="密码">
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                    </div>  
+                    
+                        <button onclick="registerNew()" class="font-16 btn btn-center-m mt-4 mb-3 rounded-l text-uppercase font-550 shadow-s bg-dark-dark">注 册</button>
+                        <button onclick="login()" class="font-16 font-600 btn btn-center-m mb-3 rounded-l text-uppercase font-550 border color-dark-dark shadow-s">登 录</button>
+
+                </div>
+
+
+                
+            </div>
+        </div>
+        
+             
+    </div>
+    <!-- Page content ends here-->
+     
+    <!--         <div>
+            <p class="text-center">卡片处理完啦，嘿嘿</p>
+        </div>
+        Page content ends here-->
+
+
+        <!-- Install Prompt for Android -->
+        <div id="menu-install-pwa-android" class="menu menu-box-bottom rounded-m">
+            <img class="mx-auto mt-4 rounded-m" src="code/app/icons/icon-128x128.png" alt="img" width="90">
+            <h4 class="text-center mt-4 mb-2">添加Assembo到主页</h4>
+            <p class="font-16 mt-3 text-center boxed-text-xl">
+                1. 用Chrome打开该链接<br>
+                2. 打开Chrome菜单并选择“添加到主页”
+            </p>
+            <div class="boxed-text-l">
+                <a href="#" class="pwa-install mx-auto btn btn-m font-600 bg-dark-dark">添加Assembo到主页</a>
+                <a href="#" class="font-16 pwa-dismiss close-menu btn-full mt-2 pt-2 text-center text-uppercase font-600 color-red-light font-12 pb-4 mb-3">稍后再试</a>
+            </div>
+        </div>   
+    
+        <!-- Install instructions for iOS -->
+        <div id="menu-install-pwa-ios" class="menu menu-box-bottom rounded-m">
+            <div class="boxed-text-xl top-25">
+                <img class="mx-auto mt-4 rounded-m" src="code/app/icons/icon-128x128.png" alt="img" width="90">
+                <h4 class="text-center mt-4 mb-2">添加Assembo到主页</h4>
+                <p class="font-16 mt-3 text-center ms-3 me-3">
+                    1. 用Safari打开该链接 <br>
+                    2. 打开Safari菜单并选择“添加到主页”
+                </p>
+                <a href="#" class="font-16 pwa-dismiss close-menu btn-full mt-2 text-center text-uppercase font-900 color-red-light opacity-90 font-110 pb-5">稍后再试</a>
+            </div>
+        </div>
+    
+    
+</div>
+
+</body>
+</html>

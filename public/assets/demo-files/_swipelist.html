@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+    <script type="text/javascript" src="scripts/swiped.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Assembo</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+    <style>
+        li, .foo {
+            list-style: none;
+        }
+        
+        ul {
+            margin: 0 0 10px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+<body class="theme-light">
+
+    <div id="page">
+        <div class="header header-fixed header-logo-center header-auto-show">
+            <a href="index.html" class="header-title">Assembo</a>
+            <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    
+        <div id="footer-bar" class="footer-bar-1">
+            <a href="_timeline.html" class="active-nav"><i class="fa fa-ruler-vertical"></i></a>
+            <a href="_input-sheet.html" class="active-nav"><i class="fa fa-plus"></i></a>
+            <a href="_user-list.html" class="active-nav"><i class="fa fa-users"></i></a>
+        </div>
+        
+        <div class="page-title page-title-fixed">
+            <h1>Update Feed</h1>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-share-alt"></i></a>
+        </div>
+        <div class="page-title-clear"></div>
+
+        <div id="menu-share" class="menu menu-box-bottom rounded-m"  data-menu-load="menu-share.html" data-menu-height="370"> </div> 
+
+        <div class="wrapper">
+            <ul class="list3">
+                <li>
+                    <div class="card card-style">
+                        <div class="content">
+                            <p class="font-600 mb-n1 color-green-dark">Task Card
+                            </p>
+                            <h1>AutoCAD file V1 updated</h1>
+                            <h6>
+                                <span class="color-green-dark"><i class="fas fa-chevron-left"></i>Swipe left to mark read</span>
+                                <br>
+                                <span class="color-yellow-dark"><i class="fas fa-chevron-right"></i>Swipe right to mark for followup</span>
+                            </h6>
+                            <p>
+                                Updated this part and that part on CAD.
+                            </p>
+                            <img src="images/task/FreeCAD.jpg" width="100" height="100" class="rounded-m">
+                            <img src="images/task/FreeCAD.jpg" width="100" height="100" class="rounded-m">
+                            <img src="images/task/FreeCAD.jpg" width="100" height="100" class="rounded-m">
+
+                            <p><em>Created by Emily at 1:30pm PST 3/1/2021</em></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card card-style">
+                        <div class="content">
+                            <p class="font-600 mb-n1 color-yellow-dark">Review Card</p>
+                            <h1>Review for lab access</h1>
+                            <h6>
+                                <span class="color-green-dark"><i class="fas fa-chevron-left"></i>Swipe left to approve</span>
+                                <br>
+                                <span class="color-yellow-dark"><i class="fas fa-chevron-right"></i>Swipe right to disapprove</span>
+                            </h6>
+                            <p>
+                                Test engineer intern's request for lab access.
+                            </p>
+                            <em>Created by Zack at 1:00pm PST 3/1/2021</em>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card card-style">
+                        <div class="content">
+                            <p class="font-600 mb-n1 color-green-dark">Task Card
+                            </p>
+                            <h1>Marketing video updated</h1>
+                            <h6>
+                                <span class="color-green-dark"><i class="fas fa-chevron-left"></i>Swipe left to mark read</span>
+                                <br>
+                                <span class="color-yellow-dark"><i class="fas fa-chevron-right"></i>Swipe right to mark for followup</span>
+                            </h6>
+                            <p>
+                                Added CAD explosion view into video.
+                            </p>
+                            <img src="images/pictures/6s.jpg" width="100" height="100" class="rounded-m">
+                            <img src="images/pictures/6s.jpg" width="100" height="100" class="rounded-m">
+                            <img src="images/pictures/6s.jpg" width="100" height="100" class="rounded-m">
+
+                            <p><em>Created by Emily at 1:30pm PST 3/1/2021</em></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script>
+            var a3 = Swiped.init({
+                query: '.list3 li',
+                left: 400,
+                right: 400,
+                onOpen: function() {
+                    this.destroy(true)
+                },
+                onClose: function() {
+                    console.log('close')
+                }
+            });
+
+        </script>
+
+    <!-- Input sheet--> 
+    <div id="input-sheet" data-back-button class="menu menu-box-bottom rounded-m" data-menu-load="_component-inputs.html" data-menu-height="600"></div>
+ 
+    </div>   
+     
+
+</body>
+</html>

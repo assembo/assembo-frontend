@@ -1,0 +1,100 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+        <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+        <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="bmob.js"></script>
+        <script type="text/javascript" src="db.js"></script>
+        
+
+
+        <title>Assembo</title>
+        
+        <style>
+            li, .foo {
+                list-style: none;
+            }
+            
+            ul {
+                margin: 0 0 10px;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+
+
+        <!-- TITLE -->
+        <header>
+            <h1>Update Feed</h1>
+        </header>
+        <!-- INPUT FIELD TO ENTER TASK AND DROPDOWN FILTER -->
+        <form>
+            <input type="text" placeholder="Title" class="title_input"/>
+            <input type="text" placeholder="Description" class="description_input"/>
+
+            <button onclick="addnew()" class="todo_button" type="submit">
+                Submit<i class="fas fa-plus-square"></i>
+            </button>
+
+            <script>
+                function addnew(){
+                    var newUpdate = Bmob.Object.extend("newUpdate");
+                    var newUpdate = new newUpdate();
+                    newUpdate.set("updateTitle",titleInput.value);
+                    newUpdate.set("updateDescription",descriptionInput.value);
+                    //添加数据，第一个入口参数是null
+                    newUpdate.save(null, {
+                    success: function(newUpdate) {
+                    // 添加成功，返回成功之后的objectId（注意：返回的属性名字是id，不是objectId），你还可以在Bmob的Web管理后台看到对应的数据
+                    alert('添加数据成功，返回的objectId是：' + newUpdate.id);
+                    },
+                    error: function(newUpdate, error) {
+                    // 添加失败
+                    alert('添加数据失败，返回错误信息：' + error.description);
+                    }
+                    });
+                }
+            </script>
+
+            <div class="select">
+                <select name="todos" class="filter_todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
+        <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
+        <div class="todo_container">
+            <ul class="todo_list"></ul>
+        </div>
+
+        <div id="footer-bar" class="footer-bar-1">
+            <a href="_timeline.html" class="active-nav"><i class="fa fa-ruler-vertical"></i></a>
+            <a href="_input-sheet.html" class="active-nav"><i class="fa fa-plus"></i></a>
+            <a href="_user-list.html" class="active-nav"><i class="fa fa-users"></i></a>
+        </div>
+        
+        
+        <!-- ADDING JAVA SCRIPT -->
+        <script src="./_task.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/swiped.js"></script>
+    </body>
+
+
+    </html>

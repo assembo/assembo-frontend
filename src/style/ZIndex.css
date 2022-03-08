@@ -1,0 +1,7 @@
+.assembo-high-priority {
+    z-index: 100;
+}
+
+.assembo-mid-priority {
+    z-index: 50;
+}
